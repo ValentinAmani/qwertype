@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QwerType</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>QwerType</h1>
+      <h2>L'application pour écrire correctement !</h2>
+      <h3>
+        QwerType est une application web pour apprendre à taper correctement au
+        clavier
+      </h3>
+    </header>
+    <main>
+      <div>
+        <p>
+          Choisissez votre option et tapez la proposition qui s'affiche dans le
+          champ en-dessous.
+        </p>
+        <div class="option-source">
+          <input
+            type="radio"
+            name="option-source"
+            id="words"
+            value="1"
+            checked
+          />
+          <label for="words">Mots</label>
+          <input type="radio" name="option-source" id="sentences" value="2" />
+          <label for="sentences">Phrases</label>
+        </div>
+      </div>
+      <div class="proposal-area">Qwerty</div>
+      <div class="type-area">
+        <input type="text" id="write-input" name="write-input" />
+        <button id="btn-validate-word">Valider</button>
+      </div>
+      <div class="score-area">Votre score : <span>0</span></div>
+      <div class="share-area">
+        <button>Partager</button>
+      </div>
+    </main>
+    <footer>QwerType</footer>
+
+    <div class="popup-background">
+      <div class="popup">
+        <div>Partagez votre score</div>
+        <form novalidate>
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" />
+          <label for="email">Avec qui voulez-vous partager votre score ?</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nom@domaine.com"
+          />
+          <button id="btnEnvoyerMail">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
